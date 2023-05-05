@@ -1,10 +1,16 @@
 import path from "path";
 import { configuration } from "./ config/webpack/webpack";
 
-export default configuration({
-  mode: "development",
-  paths: {
-    html: path.resolve("public", "index.html"),
-    entry: path.resolve("src", "index.ts"),
-  },
-});
+interface IEnv {
+  mode?: "development" | "production";
+}
+
+export default ({ mode }: IEnv) => {
+  return configuration({
+    mode: mode ?? "development",
+    paths: {
+      html: path.resolve("public", "index.html"),
+      entry: path.resolve("src", "index.ts"),
+    },
+  });
+};

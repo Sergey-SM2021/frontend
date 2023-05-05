@@ -4,6 +4,7 @@ import { resolve } from "./resolve";
 import { module } from "./module";
 import { IConfiguration } from "./types/types";
 import path from "path";
+import "webpack-dev-server";
 
 export const configuration = ({
   mode,
@@ -20,5 +21,12 @@ export const configuration = ({
     plugins: plugins({ html: paths.html }),
     module: module(),
     resolve: resolve(),
+    devtool: mode === "development" ? "inline-source-map" : undefined,
+    devServer:
+      mode === "development"
+        ? {
+            open: true,
+          }
+        : undefined,
   };
 };
