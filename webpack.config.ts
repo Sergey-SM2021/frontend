@@ -10,7 +10,7 @@ export default ({ mode }: IEnv) => {
     mode: mode ?? "development",
     paths: {
       html: path.resolve("public", "index.html"),
-      entry: path.resolve("src", "index.ts"),
+      entry: path.resolve("src", "index.tsx"),
     },
   });
 };
