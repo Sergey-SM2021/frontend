@@ -3,10 +3,12 @@ import { configuration } from "./ config/webpack/webpack";
 
 interface IEnv {
   mode?: "development" | "production";
+  port?: number;
 }
 
-export default ({ mode }: IEnv) => {
+export default ({ mode, port }: IEnv) => {
   return configuration({
+    port: port ?? 8080,
     mode: mode ?? "development",
     paths: {
       html: path.resolve("public", "index.html"),

@@ -1,7 +1,7 @@
 import { Configuration } from "webpack";
 import { plugins } from "./plugins";
 import { resolve } from "./resolve";
-import { module } from "./module";
+import { rules } from "./rules";
 import { IConfiguration } from "./types/types";
 import path from "path";
 import "webpack-dev-server";
@@ -9,6 +9,7 @@ import "webpack-dev-server";
 export const configuration = ({
   mode,
   paths,
+  port,
 }: IConfiguration): Configuration => {
   return {
     entry: paths.entry,
@@ -19,12 +20,15 @@ export const configuration = ({
     },
     mode,
     plugins: plugins({ html: paths.html }),
-    module: module(),
+    module: {
+      rules: rules({ mode }),
+    },
     resolve: resolve(),
     devtool: mode === "development" ? "inline-source-map" : undefined,
     devServer:
       mode === "development"
         ? {
+            port,
             open: true,
           }
         : undefined,

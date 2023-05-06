@@ -1,6 +1,5 @@
-import { Configuration } from "webpack";
-
 export interface IConfiguration {
-  mode: Configuration["mode"];
+  mode: "development" | "production";
   paths: Record<"entry" | "html", string>;
+  port: number;
 }
