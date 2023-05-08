@@ -23,7 +23,7 @@ export const configuration = ({
     module: {
       rules: rules({ mode }),
     },
-    resolve: resolve(),
+    resolve: resolve({ src: paths.src }),
     devtool: mode === "development" ? "inline-source-map" : undefined,
     devServer:
       mode === "development"

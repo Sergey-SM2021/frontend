@@ -1,11 +1,10 @@
 import { createRoot } from "react-dom/client";
-import "./style/style.scss";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Suspense } from "react";
-import { AboutPage } from "./pages/About/About.lazy";
-import { UsersPage } from "./pages/Users/Users.lazy";
-import { App } from "./App";
-import { ThemeProvider } from "./theme/provider";
+import { AboutPage } from "./pages/About/ui/About.lazy";
+import { UsersPage } from "./pages/Users/ui/Users.lazy";
+import { App } from "./app/App";
+import { ThemeProvider } from "./app/theme/provider";
 
 const router = createBrowserRouter([
   {

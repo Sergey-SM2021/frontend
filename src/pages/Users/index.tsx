@@ -1,7 +1,1 @@
-interface IUsers {}
-
-const Users = () => {
-  return <div>Users</div>;
-};
-
-export default Users
+export { UsersPage } from "./ui/Users.lazy";

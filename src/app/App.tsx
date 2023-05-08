@@ -1,4 +1,5 @@
-import { useTheme } from "./hooks/useTheme";
+import { useTheme } from "shared/hooks/useTheme";
+import "./style/style.scss";
 
 interface IApp {}
 

@@ -1,7 +1,1 @@
-interface IAbout {}
-
-const About = () => {
-  return <div>About</div>;
-};
-
-export default About
+export { AboutPage } from "./ui/About.lazy";
