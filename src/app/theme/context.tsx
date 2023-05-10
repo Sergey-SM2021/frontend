@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { TTheme } from "./provider";
+import { TTheme } from "./const";
 
 interface ThemeContext {
   theme: TTheme;
