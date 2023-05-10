@@ -1,14 +1,13 @@
 import { createRoot } from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
-import { Suspense } from "react";
-import { ThemeProvider } from "./app/theme/provider";
-import { router } from "app/providers/router/config";
+import { ThemeProvider } from "./app/providers/theme/provider";
+import { BrowserRouter } from "react-router-dom";
+import { RouterProvider } from "app/providers/router/ui/RouterProvider";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
-  <ThemeProvider>
-    <Suspense>
-      <RouterProvider router={router} />
-    </Suspense>
-  </ThemeProvider>
+  <BrowserRouter>
+    <ThemeProvider>
+      <RouterProvider />
+    </ThemeProvider>
+  </BrowserRouter>
 );

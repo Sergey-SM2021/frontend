@@ -1,19 +1,31 @@
 import { App } from "app/App";
 import { AboutPage } from "pages/About";
 import { UsersPage } from "pages/Users";
-import { createBrowserRouter } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
-export const router = createBrowserRouter([
-  {
-    path: "/about",
+enum pages {
+  ABOUT = "ABOUT",
+  USERS = "USERS",
+  APP = "APP",
+}
+
+const pagesPaths: Record<pages, string> = {
+  [pages.ABOUT]: "/about",
+  [pages.USERS]: "/users",
+  [pages.APP]: "/",
+};
+
+export const router: Record<pages, RouteProps> = {
+  [pages.ABOUT]: {
+    path: pagesPaths.ABOUT,
     element: <AboutPage />,
   },
-  {
-    path: "/users",
+  [pages.USERS]: {
+    path: pagesPaths.USERS,
     element: <UsersPage />,
   },
-  {
-    path: "/",
+  [pages.APP]: {
+    path: pagesPaths.APP,
     element: <App />,
   },
-]);
+};
