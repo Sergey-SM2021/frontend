@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, useState } from "react";
-import { ThemeContext } from "../context";
+import { ThemeContext } from "../model/context";
 import { TTheme } from "../model/const";
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
