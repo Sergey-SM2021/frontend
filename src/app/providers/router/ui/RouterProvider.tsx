@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import { router } from "../config";
+import { router } from "../model/config";
 
 export const RouterProvider = () => {
   return (

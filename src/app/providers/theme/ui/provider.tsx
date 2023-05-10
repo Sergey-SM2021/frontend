@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren, useState } from "react";
-import { ThemeContext } from "./context";
-import { TTheme } from "./const";
+import { ThemeContext } from "../context";
+import { TTheme } from "../model/const";
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState<TTheme>(TTheme.default);
