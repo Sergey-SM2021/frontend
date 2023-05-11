@@ -1,18 +1,15 @@
-import { App } from "app/App";
 import { AboutPage } from "pages/About";
-import { UsersPage } from "pages/Users";
+import { MainPage } from "pages/Main";
 import { RouteProps } from "react-router-dom";
 
 enum pages {
   ABOUT = "ABOUT",
-  USERS = "USERS",
-  APP = "APP",
+  MAIN = "USERS",
 }
 
 const pagesPaths: Record<pages, string> = {
   [pages.ABOUT]: "/about",
-  [pages.USERS]: "/users",
-  [pages.APP]: "/",
+  [pages.MAIN]: "/",
 };
 
 export const router: Record<pages, RouteProps> = {
@@ -20,12 +17,8 @@ export const router: Record<pages, RouteProps> = {
     path: pagesPaths.ABOUT,
     element: <AboutPage />,
   },
-  [pages.USERS]: {
+  [pages.MAIN]: {
     path: pagesPaths.USERS,
-    element: <UsersPage />,
-  },
-  [pages.APP]: {
-    path: pagesPaths.APP,
-    element: <App />,
+    element: <MainPage />,
   },
 };

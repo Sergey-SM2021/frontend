@@ -3,8 +3,8 @@ import "./style/style.scss";
 import { classnames } from "shared/utils/classnames";
 import { Header } from "widgets/header";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
-
-interface IApp {}
+import { RouterProvider } from "./providers/router";
+import { Sidebar } from "widgets/sidebar";
 
 export const App = () => {
   const { theme } = useTheme();
@@ -12,7 +12,10 @@ export const App = () => {
   return (
     <div className={classnames("app", {}, [theme])}>
       <Header />
-      <ThemeSwitcher />
+      <div className="layout">
+        <Sidebar />
+        <RouterProvider />
+      </div>
     </div>
   );
 };
