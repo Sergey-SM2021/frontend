@@ -1,0 +1,13 @@
+.header {
+    background-color: var(--bg-inverted);
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    gap: 30px;
+}
