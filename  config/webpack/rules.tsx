@@ -6,7 +6,6 @@ interface IRules {
 }
 
 export const rules = ({ mode }: IRules): RuleSetRule[] => {
-
   const css = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -16,7 +15,10 @@ export const rules = ({ mode }: IRules): RuleSetRule[] => {
         options: {
           modules: {
             auto: /\.module\./,
-            localIdentName: mode === "development" ? "[path][name]__[local]" : "[hash:base64]",
+            localIdentName:
+              mode === "development"
+                ? "[path][name]__[local]"
+                : "[hash:base64]",
           },
         },
       },
@@ -30,5 +32,11 @@ export const rules = ({ mode }: IRules): RuleSetRule[] => {
     exclude: /node_modules/,
   };
 
-  return [css, ts];
+  const svg = {
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    use: [{ loader: "@svgr/webpack" }],
+  };
+
+  return [css, ts, svg];
 };
