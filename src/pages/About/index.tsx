@@ -1,1 +1,1 @@
-export { AboutPage } from "./ui/About.lazy";
+export { AboutPage } from "./ui/About.lazy"

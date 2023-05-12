@@ -1,1 +1,1 @@
-export { MainPage } from "./ui/Main.lazy";
+export { MainPage } from "./ui/Main.lazy"
