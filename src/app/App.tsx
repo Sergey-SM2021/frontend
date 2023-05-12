@@ -2,7 +2,6 @@ import { useTheme } from "shared/hooks/useTheme";
 import "./style/style.scss";
 import { classnames } from "shared/utils/classnames";
 import { Header } from "widgets/header";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { RouterProvider } from "./providers/router";
 import { Sidebar } from "widgets/sidebar";
 

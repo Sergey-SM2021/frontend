@@ -1,17 +1,17 @@
 .app.default {
-    --bg: #898;
-    --bg-inverted: rgb(70, 71, 70);
+    --bg: #fce9e4;
+    --bg-inverted: #1c1e26;
 
-    --primary: #aa0909;
-    
-    --secondary: rgb(162, 202, 196);
+    --primary: #d85170;
+
+    --secondary: #d85170;
 }
 
-.app.dark{
-    --bg: rgb(24, 27, 24);
-    --bg-inverted: rgb(94, 90, 99);
+.app.dark {
+    --bg: #011529;
+    --bg-inverted: #504f54;
 
-    --primary: #f10000;
-    
-    --secondary: #187;
+    --primary: #72e5bd;
+
+    --secondary: #009a9a;
 }
