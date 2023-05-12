@@ -6,14 +6,20 @@ import { WebpackPluginServe } from "webpack-plugin-serve";
 
 interface IPlugins {
   html: string;
+  isDev: boolean;
 }
 
-export const plugins = ({ html }: IPlugins) => {
+export const plugins = ({ html, isDev }: IPlugins) => {
+  const devPlugins = isDev
+    ? [
+        new ReactRefreshWebpackPlugin(),
+        new webpack.ProgressPlugin(),
+        new WebpackPluginServe(),
+      ]
+    : [];
   return [
     new HtmlWebpackPlugin({ template: html }),
-    new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin(),
-    new ReactRefreshWebpackPlugin(),
-    new WebpackPluginServe(),
+    ...devPlugins,
   ];
 };

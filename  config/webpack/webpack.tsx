@@ -16,10 +16,10 @@ export const configuration = ({
     output: {
       path: path.resolve("build"),
       clean: true,
-      filename: "my-first-webpack.bundle.js",
+      filename: "[name].[contenthash].bundle.js",
     },
     mode,
-    plugins: plugins({ html: paths.html }),
+    plugins: plugins({ html: paths.html, isDev: mode === "development" }),
     module: {
       rules: rules({ mode }),
     },

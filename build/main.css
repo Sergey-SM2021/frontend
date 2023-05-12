@@ -1,13 +1,5 @@
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
-  \*************************************************************************************************************************************/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.main {
-  background-color: lightseagreen;
-}
-
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7RUFDSTtFQUNBO0FBQ0o7O0FBRUE7RUFDSTtBQUNKLEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGUuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcbiAgICBtYXJnaW46IDA7XG4gICAgcGFkZGluZzogMDtcbn1cblxuLm1haW57XG4gICAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHRzZWFncmVlbjtcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+*{margin:0;padding:0;box-sizing:border-box}:root{--font-family: "Open Sans", sans-serif;--font-size-m: 16px;--line-height-m: 110%;--font-m: var(--font-size-m) / var(--line-height-m) var(--font-family);--header-h: 30px;--spacing: 30px;--transition: .1s;--sidebar-w-open: 300px;--sidebar-w-close: 100px}.app.default{--bg: #fce9e4;--bg-inverted: #1c1e26;--primary: #d85170;--secondary: #d85170}.app.dark{--bg: #011529;--bg-inverted: #504f54;--primary: #72e5bd;--secondary: #009a9a}.app{height:100vh;background:var(--bg);color:var(--primary);font:var(--font-m)}.layout{display:flex}
+._ROKP2BsZ4I1XWBqrakg{color:var(--primary);text-decoration:none}.xXZ471UeC3Q1OyGVd5Uj{color:var(--primary);text-decoration:underline}
+.vJFRfhPJRZWqjHU48LlQ{background-color:var(--bg-inverted);height:var(--header-h);display:flex;align-items:center;padding:0 calc(var(--spacing)/2)}.Baj1vVCoj4zniY5auwLD{width:100%;justify-content:flex-end;display:flex;gap:var(--spacing)}
+.GSoE4lJqADR_VKBo7naw{display:flex;flex-direction:column;transition:var(--transition);background-color:var(--bg-inverted);height:calc(100vh - var(--header-h));width:var(--sidebar-w-close)}.uchrBLLgQa6fg1xC1exw{flex-grow:1}.i5mA_RL5ZUjxxcj6R__D{width:var(--sidebar-w-open)}
