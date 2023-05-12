@@ -28,6 +28,7 @@ export const configuration = ({
     devServer:
       mode === "development"
         ? {
+            hot: true,
             historyApiFallback: true,
             port,
             open: true,
