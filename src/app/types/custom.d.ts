@@ -7,3 +7,5 @@ declare module "*.svg" {
   const svg: any;
   export default svg;
 }
+
+declare const __IS_DEV__: boolean;

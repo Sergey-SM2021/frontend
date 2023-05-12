@@ -8,7 +8,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "Русский",
-    debug: true,
+    debug: __IS_DEV__ ? true : false,
     interpolation: {
       escapeValue: false,
     },

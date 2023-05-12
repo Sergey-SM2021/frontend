@@ -20,6 +20,7 @@ export const plugins = ({ html, isDev }: IPlugins) => {
   return [
     new HtmlWebpackPlugin({ template: html }),
     new MiniCssExtractPlugin(),
+    new webpack.DefinePlugin({ __IS_DEV__: JSON.stringify(isDev) }),
     ...devPlugins,
   ];
 };
