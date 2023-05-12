@@ -38,5 +38,11 @@ export const rules = ({ mode }: IRules): RuleSetRule[] => {
     use: [{ loader: "@svgr/webpack" }],
   };
 
-  return [css, ts, svg];
+  const babel = {
+    test: /\.m?js$/,
+    exclude: /node_modules/,
+    use: "babel-loader",
+  };
+
+  return [css, babel, ts, svg];
 };

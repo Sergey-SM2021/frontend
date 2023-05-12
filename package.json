@@ -5,12 +5,15 @@
     "start": "webpack serve --env port=3000"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
     "@svgr/webpack": "^8.0.1",
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.4",
     "@types/webpack": "^5.28.1",
     "@types/webpack-plugin-serve": "^1.4.2",
+    "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.1",
     "mini-css-extract-plugin": "^2.7.5",
