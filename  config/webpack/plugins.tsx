@@ -1,8 +1,8 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
-import { WebpackPluginServe } from "webpack-plugin-serve";
+import HtmlWebpackPlugin from "html-webpack-plugin"
+import webpack from "webpack"
+import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin"
+import { WebpackPluginServe } from "webpack-plugin-serve"
 
 interface IPlugins {
   html: string;
@@ -10,17 +10,17 @@ interface IPlugins {
 }
 
 export const plugins = ({ html, isDev }: IPlugins) => {
-  const devPlugins = isDev
-    ? [
-        new ReactRefreshWebpackPlugin(),
-        new webpack.ProgressPlugin(),
-        new WebpackPluginServe(),
-      ]
-    : [];
-  return [
-    new HtmlWebpackPlugin({ template: html }),
-    new MiniCssExtractPlugin(),
-    new webpack.DefinePlugin({ __IS_DEV__: JSON.stringify(isDev) }),
-    ...devPlugins,
-  ];
-};
+	const devPlugins = isDev
+		? [
+			new ReactRefreshWebpackPlugin(),
+			new webpack.ProgressPlugin(),
+			new WebpackPluginServe(),
+		]
+		: []
+	return [
+		new HtmlWebpackPlugin({ template: html }),
+		new MiniCssExtractPlugin(),
+		new webpack.DefinePlugin({ __IS_DEV__: JSON.stringify(isDev) }),
+		...devPlugins,
+	]
+}
