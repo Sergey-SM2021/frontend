@@ -3,6 +3,7 @@ import webpack from "webpack"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin"
 import { WebpackPluginServe } from "webpack-plugin-serve"
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"
 
 interface IPlugins {
   html: string;
@@ -15,6 +16,7 @@ export const plugins = ({ html, isDev }: IPlugins) => {
 			new ReactRefreshWebpackPlugin(),
 			new webpack.ProgressPlugin(),
 			new WebpackPluginServe(),
+			new BundleAnalyzerPlugin()
 		]
 		: []
 	return [
