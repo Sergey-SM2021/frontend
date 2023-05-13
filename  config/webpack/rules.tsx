@@ -26,12 +26,6 @@ export const rules = ({ mode }: IRules): RuleSetRule[] => {
     ],
   };
 
-  const ts = {
-    test: /\.tsx?$/,
-    use: "ts-loader",
-    exclude: /node_modules/,
-  };
-
   const svg = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
@@ -39,10 +33,10 @@ export const rules = ({ mode }: IRules): RuleSetRule[] => {
   };
 
   const babel = {
-    test: /\.m?js$/,
-    exclude: /node_modules/,
+    test: /\.(tsx|jsx|ts|js)?$/,
     use: "babel-loader",
-  };
+    exclude: /node_modules/,
+  }
 
-  return [css, babel, ts, svg];
+  return [css, babel, svg];
 };
