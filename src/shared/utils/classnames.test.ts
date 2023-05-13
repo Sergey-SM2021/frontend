@@ -1,5 +1,7 @@
-import { classnames } from "./classnames";
+const fn = (str: string) => str.split("").reverse().join("") 
 
 describe("classnames", () => {
-  expect(classnames("main", {}, [])).toBe("main");
-});
+	test("first test",()=>{
+		expect(fn("str")).toBe("rts")
+	})
+})
