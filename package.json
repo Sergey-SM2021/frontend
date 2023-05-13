@@ -4,7 +4,8 @@
     "build:prod": "webpack --env mode=production",
     "start": "webpack serve --env port=3000",
     "lint:code": "eslint --fix './src'",
-    "lint:style": "stylelint '**/*.scss' --fix"
+    "lint:style": "stylelint '**/*.scss' --fix",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
