@@ -19,6 +19,7 @@ export const Sidebar = () => {
 				[]
 			)}
 		>
+      lol
 			<div className={style.sidebar__control}>
 				<button onClick={handlerToggle}>toggle</button>
 			</div>
