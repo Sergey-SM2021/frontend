@@ -14,4 +14,10 @@ describe("classnames", () => {
 			"clx one ugu"
 		)
 	})
+
+	test("в доп массиве есть underfind", () => {
+		expect(classnames("clx", { one: true, last: false }, [undefined])).toBe(
+			"clx one"
+		)
+	})
 })

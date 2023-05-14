@@ -9,4 +9,4 @@ export const classnames = (
 			.filter(([, value]) => value)
 			.map((el) => el[0]),
 		...secondary,
-	].filter(el => el.length).join(" ")
+	].filter(el => el && el.length).join(" ")
