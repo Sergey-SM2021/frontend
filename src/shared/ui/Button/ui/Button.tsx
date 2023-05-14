@@ -10,7 +10,7 @@ export const Button = (props: ButtonProps) => {
 	return (
 		<button
 			{...restProps}
-			className={classnames(style.button, {}, [className])}
+			className={classnames(style.button, {}, className && [className])}
 		>
 			{props.children}
 		</button>
