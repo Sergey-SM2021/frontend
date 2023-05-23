@@ -1,3 +1,18 @@
-.button{
-    background: #000;
+.primary{
+    background: var(--primary);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+}
+
+.empty{
+    padding: var(--padding);
+    background: transparent;
+    border: none;
+}
+
+.outline{
+    padding: var(--padding);
+    background: transparent;
+    border: 1px solid;
+    border-radius: var(--border-radius);
 }
