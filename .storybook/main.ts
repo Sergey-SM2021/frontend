@@ -17,10 +17,18 @@ const config: StorybookConfig = {
   webpackFinal: (config) => {
     config.resolve?.modules?.push(path.resolve("src"));
     config.module?.rules?.push({
-      test: /\.scss$/,
+      test: /\.s[ac]ss$/i,
       use: [
         "style-loader",
-        { loader: "css-loader", options: { modules: true } },
+        {
+          loader: "css-loader",
+          options: {
+            modules: {
+              auto: /\.module\./,
+              localIdentName: "[path][name]__[local]",
+            },
+          },
+        },
         "sass-loader",
       ],
     });

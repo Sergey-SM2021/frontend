@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
+import "../../../../app/style/style.scss"
 
 import { Button, ThemeEnum } from "./Button"
-import { styleDecorator } from "app/storybook/decorators/styleDecorator"
 
 const meta = {
 	title: "Shared/Button",
@@ -12,31 +12,86 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const PrimaryDefault: Story = {
 	args: {
 		theme: ThemeEnum.PRIMARY,
 		children: "кнопка",
 	},
 	decorators: [
-		styleDecorator,
 		(Story) => (
-			<div className="app">
+			<div className="app default">
 				<Story />
 			</div>
 		),
 	],
 }
 
-export const Outline: Story = {
+export const PrimaryDark: Story = {
+	args: {
+		theme: ThemeEnum.PRIMARY,
+		children: "кнопка",
+	},
+	decorators: [
+		(Story) => (
+			<div className="app dark">
+				<Story />
+			</div>
+		),
+	],
+}
+
+export const OutlineDefault: Story = {
 	args: {
 		theme: ThemeEnum.OUTLINE,
 		children: "кнопка",
 	},
+	decorators: [
+		(Story) => (
+			<div className="app default">
+				<Story />
+			</div>
+		),
+	],
 }
 
-export const Empty: Story = {
+export const OutlineDark: Story = {
+	args: {
+		theme: ThemeEnum.OUTLINE,
+		children: "кнопка",
+	},
+	decorators: [
+		(Story) => (
+			<div className="app dark">
+				<Story />
+			</div>
+		),
+	],
+}
+
+export const EmptyDefault: Story = {
 	args: {
 		theme: ThemeEnum.EMPTY,
 		children: "кнопка",
 	},
+	decorators: [
+		(Story) => (
+			<div className="app default">
+				<Story />
+			</div>
+		),
+	],
+}
+
+export const EmptyDark: Story = {
+	args: {
+		theme: ThemeEnum.EMPTY,
+		children: "кнопка",
+	},
+	decorators: [
+		(Story) => (
+			<div className="app dark">
+				<Story />
+			</div>
+		),
+	],
 }
