@@ -32,6 +32,12 @@ const config: StorybookConfig = {
         "sass-loader",
       ],
     });
+    config.module?.rules?.forEach((rule) => (rule.exclude = /\.svg$/i));
+    config.module?.rules?.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: [{ loader: "@svgr/webpack" }],
+    });
     return config;
   },
 };
