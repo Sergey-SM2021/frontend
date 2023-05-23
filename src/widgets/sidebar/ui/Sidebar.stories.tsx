@@ -1,6 +1,7 @@
 import type { Meta, StoryFn, StoryObj } from "@storybook/react"
 import "app/style/style.scss"
-import {Sidebar} from "./Sidebar"
+import "./i18nTestConfig"
+import { Sidebar } from "./Sidebar"
 
 const darkTheme = (Story: StoryFn) => (
 	<div className="app dark">
@@ -24,13 +25,11 @@ export default meta
 type Story = StoryObj<typeof meta>;
 
 export const DefaultSidebar: Story = {
-	args: {
-	},
+	args: {},
 	decorators: [darkTheme],
 }
 
 export const DarkSidebar: Story = {
-	args: {
-	},
+	args: {},
 	decorators: [defaultTheme],
 }
