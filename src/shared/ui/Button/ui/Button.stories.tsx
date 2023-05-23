@@ -1,7 +1,19 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import "../../../../app/style/style.scss"
+import type { Meta, StoryFn, StoryObj } from "@storybook/react"
+import "app/style/style.scss"
 
 import { Button, ThemeEnum } from "./Button"
+
+const darkTheme = (Story: StoryFn) => (
+	<div className="app dark">
+		<Story />
+	</div>
+)
+
+const defaultTheme = (Story: StoryFn) => (
+	<div className="app default">
+		<Story />
+	</div>
+)
 
 const meta = {
 	title: "Shared/Button",
@@ -17,13 +29,7 @@ export const PrimaryDefault: Story = {
 		theme: ThemeEnum.PRIMARY,
 		children: "кнопка",
 	},
-	decorators: [
-		(Story) => (
-			<div className="app default">
-				<Story />
-			</div>
-		),
-	],
+	decorators: [defaultTheme],
 }
 
 export const PrimaryDark: Story = {
@@ -31,13 +37,7 @@ export const PrimaryDark: Story = {
 		theme: ThemeEnum.PRIMARY,
 		children: "кнопка",
 	},
-	decorators: [
-		(Story) => (
-			<div className="app dark">
-				<Story />
-			</div>
-		),
-	],
+	decorators: [darkTheme],
 }
 
 export const OutlineDefault: Story = {
@@ -45,13 +45,7 @@ export const OutlineDefault: Story = {
 		theme: ThemeEnum.OUTLINE,
 		children: "кнопка",
 	},
-	decorators: [
-		(Story) => (
-			<div className="app default">
-				<Story />
-			</div>
-		),
-	],
+	decorators: [defaultTheme],
 }
 
 export const OutlineDark: Story = {
@@ -59,13 +53,7 @@ export const OutlineDark: Story = {
 		theme: ThemeEnum.OUTLINE,
 		children: "кнопка",
 	},
-	decorators: [
-		(Story) => (
-			<div className="app dark">
-				<Story />
-			</div>
-		),
-	],
+	decorators: [darkTheme],
 }
 
 export const EmptyDefault: Story = {
@@ -73,13 +61,7 @@ export const EmptyDefault: Story = {
 		theme: ThemeEnum.EMPTY,
 		children: "кнопка",
 	},
-	decorators: [
-		(Story) => (
-			<div className="app default">
-				<Story />
-			</div>
-		),
-	],
+	decorators: [defaultTheme],
 }
 
 export const EmptyDark: Story = {
@@ -87,11 +69,5 @@ export const EmptyDark: Story = {
 		theme: ThemeEnum.EMPTY,
 		children: "кнопка",
 	},
-	decorators: [
-		(Story) => (
-			<div className="app dark">
-				<Story />
-			</div>
-		),
-	],
+	decorators: [darkTheme],
 }
