@@ -5,12 +5,14 @@
 }
 
 .empty{
+    color: var(--bg-inverted);
     padding: var(--padding);
     background: transparent;
     border: none;
 }
 
 .outline{
+    color: var(--bg-inverted);
     padding: var(--padding);
     background: transparent;
     border: 1px solid;
