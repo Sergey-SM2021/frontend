@@ -7,7 +7,9 @@
     "lint:style": "stylelint '**/*.scss' --fix",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "loki:test": "loki test",
+    "loki:approve": "loki approve"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
