@@ -10,3 +10,5 @@ jobs:
         run: npm i
       - name: greeting
         run: echo hallo!
+      - name: code linting
+        run: npm run lint:code
