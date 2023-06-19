@@ -1,8 +1,12 @@
-name: workflow first
-on: [push]
+name: start-tasks
+on: [workflow_dispatch]
 jobs:
-  demo-start-job:
+  testing-application:
     runs-on: ubuntu-latest
     steps: 
+      - name: get repo
+        uses: actions/checkout@v3
+      - name: install dep
+        run: npm i
       - name: greeting
-        run: echo hi
+        run: echo hallo!
