@@ -7,6 +7,6 @@ jobs:
       - name: setup
         run: actions/checkout@v3
       - name: install dep
-        run: npm i
+        run: npm ci
       - name: greeting
         run: echo hellow
