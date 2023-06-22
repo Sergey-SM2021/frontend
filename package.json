@@ -9,7 +9,8 @@
     "storybook": "storybook -p 6006",
     "build-storybook": "storybook build",
     "loki:test": "loki test",
-    "loki:approve": "loki approve"
+    "loki:approve": "loki approve",
+    "loki:ci": "npx loki --requireReference --reactUri file:./storybook-static"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",

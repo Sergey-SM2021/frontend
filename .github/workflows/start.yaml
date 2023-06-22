@@ -11,4 +11,4 @@ jobs:
       - name: storybook
         run: npm run build-storybook
       - name: loki
-        run: npm run loki:test
+        run: npm run loki:ci
