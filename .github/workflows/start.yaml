@@ -9,6 +9,6 @@ jobs:
       - name: install dep
         run: npm install --legacy-peer-deps
       - name: storybook
-        run: npm run storybook
+        run: npm run build-storybook
       - name: loki
         run: npm run loki:test
