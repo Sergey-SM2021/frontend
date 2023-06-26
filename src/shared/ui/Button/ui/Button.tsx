@@ -6,19 +6,34 @@ export enum ThemeEnum {
   EMPTY = "empty",
   OUTLINE = "outline",
   PRIMARY = "primary",
+  BACKGROUND = "background",
+  BACKGROUND_INVERTED = "background__inverted",
+}
+
+export enum sizeEnum {
+	M = "M",
+	L = "L",
+	XL = "XL"
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme: ThemeEnum;
+  square?: boolean;
+  size?: sizeEnum;
 }
 
 export const Button = (props: ButtonProps) => {
-	const { className, theme, ...restProps } = props
+	const { className, theme, square, size, ...restProps } = props
 
 	return (
 		<button
 			{...restProps}
-			className={classnames(style.button, {  }, [className, style[theme]])}
+			className={classnames(style.button, {}, [
+				className,
+				style[theme],
+				square && style["square"],
+				size && style[size],
+			])}
 		>
 			{props.children}
 		</button>

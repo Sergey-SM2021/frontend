@@ -5,11 +5,11 @@ import { RouteProps } from "react-router-dom"
 
 enum pages {
   ABOUT = "ABOUT",
-  MAIN = "USERS",
+  MAIN = "MAIN",
   NOTFOUND = "NOTFOUND",
 }
 
-const pagesPaths: Record<pages, string> = {
+export const pagesPaths: Record<pages, string> = {
 	[pages.ABOUT]: "/about",
 	[pages.MAIN]: "/",
 	[pages.NOTFOUND]: "*",

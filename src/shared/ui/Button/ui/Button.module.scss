@@ -1,20 +1,47 @@
-.primary{
+.primary {
     background: var(--primary);
     border-radius: var(--border-radius);
     padding: var(--padding);
 }
 
-.empty{
-    color: var(--bg-inverted);
+.empty {
+    color: var(--bg);
     padding: var(--padding);
     background: transparent;
     border: none;
 }
 
-.outline{
+.outline {
     color: var(--bg-inverted);
     padding: var(--padding);
     background: transparent;
     border: 1px solid;
     border-radius: var(--border-radius);
+}
+
+.background {
+    background-color: var(--bg);
+    color: var(--primary);
+    border: none;
+}
+
+.background__inverted {
+    background-color: var(--bg-inverted);
+    color: var(--primary);
+    border: none;
+}
+
+.square.M{
+    width: 40px;
+    height: 40px;
+}
+
+.square.L{
+    width: 40px;
+    height: 40px;
+}
+
+.square.XL{
+    width: 80px;
+    height: 80px;
 }
