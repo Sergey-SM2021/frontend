@@ -7,6 +7,6 @@ jobs:
       - name: clone repo
         uses: actions/checkout@v3
       - name: install dep
-        run: yarn insatll
+        run: yarn install
       - name: storybook test
         run: npm run loki:ci
