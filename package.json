@@ -7,10 +7,10 @@
     "lint:style": "stylelint '**/*.scss' --fix",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "storybook build",
     "loki:test": "loki test",
     "loki:approve": "loki approve",
-    "loki:ci": "loki --requireReference --reactUri file:./storybook-static"
+    "loki:ci": "storybook build && loki --requireReference --reactUri file:./storybook-static"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",

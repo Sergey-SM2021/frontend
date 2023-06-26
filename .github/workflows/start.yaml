@@ -1,14 +1,12 @@
-name: Linting
-on: workflow_dispatch
+name: ci
+on: [push, workflow_dispatch]
 jobs:
-  lint:
+  ci:
     runs-on: ubuntu-latest
     steps:
-      - name: setup
+      - name: clone repo
         uses: actions/checkout@v3
       - name: install dep
-        run: npm install --legacy-peer-deps
-      - name: storybook
-        run: npm run build-storybook
-      - name: loki
+        run: yarn insatll
+      - name: storybook test
         run: npm run loki:ci
